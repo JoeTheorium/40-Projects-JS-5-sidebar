@@ -1,0 +1,69 @@
+body{
+    position: relative;
+    min-height: 100vh;
+    background: #333;
+}
+header h1{
+    position: absolute;
+    top: -0.5em;
+    left: 0.5em;
+    font-size: 3.5em;
+    z-index: 1;
+}
+nav{
+    box-shadow: 0 -3em 3em rgba(0,0,0,0.1);
+    height: 100%;
+    background: #555;
+    padding-top: 10vh;
+    padding-left: 5em;
+    padding-right: 5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: translate 1s ease-in-out;
+    translate: -20em 0;
+}
+.show{
+    translate: 0 0;
+}
+nav ul{
+    list-style: none;
+    flex-direction: column;
+    display: flex;
+    gap: 1em;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #222;
+    cursor: pointer;
+    font-size: 2.5em;
+}
+nav ul li a:hover{
+    color: #999;
+}
+main{
+    min-height: 90vh;
+    background: #333;
+}
+
+#bars>*, #close>*{
+    position: absolute;
+    top: .2em;
+    right: .5em;
+    font-size: 4em;
+    cursor: pointer;
+    z-index: 1;
+    display: block;
+    color: #222;
+}
+#bars>*:hover, #close>*:hover{
+    color: #999;
+}
+.close{
+    display: none;
+    z-index: 0;
+}
